@@ -1,0 +1,502 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  z-index: 1000;
+  width: 100%;
+  height: 120px;
+  background: transparent;
+  align-items: center;
+  font-family: Cascadia Code;
+  backdrop-filter: blur(1px); 
+  -webkit-backdrop-filter: blur(2px);
+}
+
+header.scrolled {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+header.scrolled .nav_class ul li a{
+  color: black;
+}
+
+header.scrolled .nav_class ul li a:hover{
+  color: #7B0323;
+}
+
+.logo_company{
+  width: 110px;
+  height: 110px;
+  background-image: url('../img/pura_logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-self: start;
+  margin-left: 30px;
+}
+
+.nav_class{
+  justify-self: end;
+  margin-right: 20px;
+
+}
+
+.nav_class ul{
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav_class ul li{
+  display: inline-block;
+}
+
+.nav_class ul li a{
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  font-family: 'Cascadia Code';
+  transition: color 0.3s ease-in-out;
+}
+
+.material-icons {
+  font-size: 17px !important;
+}
+
+.nav_class ul li a:hover{
+  color: #7B0323;
+}
+
+.main_picture {
+  width: 100%;
+  height: 720px;
+  background-image: url('../img/main_picture_4.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  visibility: inherit;
+}
+
+.product_name{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #7B0323;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+#products {
+  scroll-margin-top: calc(50vh - 300px);
+}
+
+.products_items {
+  width: 400px;
+  height: 500px;
+  margin: 40px auto;
+}
+
+
+.product_name{
+  justify-self: center;
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: Cascadia Code;
+
+}
+
+.about_us_div {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 300px;
+  background-color: green;
+  margin: 0;
+  padding: 0;
+}
+.about_us_div * {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .main_picture {
+    height: 500px;
+    background-size: cover;
+  }
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 0 10px;
+  }
+}
+
+.btn-flotante {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .main_picture {
+    height: 300px;
+    background-size: cover;
+  }
+  .logo_company {
+    display: none;
+  }
+  .nav_class {
+    display: none;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+  }
+  .products_items {
+    width: 100%;
+    min-height: 200px;
+    margin: 20px 0;
+  }
+  .btn-flotante {
+    display: block !important;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #7B0323;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 14px;
+  }
+}
+
+.products_items {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.products_items:nth-child(1) {
+  perspective: 1000px;
+  width: 400px;
+  height: 500px;
+}
+
+.products_items:nth-child(1) .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.products_items:nth-child(1):hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.products_items:nth-child(1) .flip-card-front,
+.products_items:nth-child(1) .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 2%;
+  overflow: hidden;
+}
+
+.products_items:nth-child(1) .flip-card-front {
+  background-image: url('../img/asd.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.products_items:nth-child(1) .flip-card-front::after {
+  content: "Summer";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products_items:nth-child(1) .flip-card-back {
+  background: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.products_items:nth-child(1) .flip-card-back .flip-card-back-photo{
+  background-image: url('../img/asd.jpeg');
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.products_items:nth-child(1) .flip-card-back-elements{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.products_items:nth-child(1) .flip-card-back-buttons {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.products_items:nth-child(1) .flip-card-back-buttons .material-icons {
+  color: #7B0323;
+  font-size: 40px !important;
+  margin-top: 10px;
+}
+
+.products_items:nth-child(1) .flip-card-back-buttons .material-icons:hover{
+  color: #3C4C24;
+}
+
+.products_items:nth-child(1) .flip-card-back-name,
+.flip-card-back-item-price {
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.products_items:nth-child(2) {
+  perspective: 1000px;
+  width: 400px;
+  height: 500px;
+}
+
+.products_items:nth-child(2) .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.products_items:nth-child(2):hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.products_items:nth-child(2) .flip-card-front,
+.products_items:nth-child(2) .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 2%;
+  overflow: hidden;
+}
+
+.products_items:nth-child(2) .flip-card-front {
+  background-image: url('../img/asd3.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.products_items:nth-child(2) .flip-card-front::after {
+  content: "Spring";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products_items:nth-child(2) .flip-card-back {
+  background: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.products_items:nth-child(2) .flip-card-back .flip-card-back-photo{
+  background-image: url('../img/asd3.jpeg');
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.products_items:nth-child(2) .flip-card-back-elements{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.products_items:nth-child(2) .flip-card-back-buttons {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.products_items:nth-child(2) .flip-card-back-buttons .material-icons {
+  color: #7B0323;
+  font-size: 40px !important;
+  margin-top: 10px;
+}
+
+.products_items:nth-child(2) .flip-card-back-buttons .material-icons:hover{
+  color: #3C4C24;
+}
+
+.products_items:nth-child(2) .flip-card-back-name,
+.flip-card-back-item-price {
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.products_items:nth-child(3) {
+  perspective: 1000px;
+  width: 400px;
+  height: 500px;
+}
+
+.products_items:nth-child(3) .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.products_items:nth-child(3):hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.products_items:nth-child(3) .flip-card-front,
+.products_items:nth-child(3) .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 2%;
+  overflow: hidden;
+}
+
+.products_items:nth-child(3) .flip-card-front {
+  background-image: url('../img/asd1.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.products_items:nth-child(3) .flip-card-front::after {
+  content: "Winter";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.products_items:nth-child(3) .flip-card-back {
+  background: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.products_items:nth-child(3) .flip-card-back .flip-card-back-photo{
+  background-image: url('../img/asd1.jpeg');
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+
+}
+
+.products_items:nth-child(3) .flip-card-back-elements{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.products_items:nth-child(3) .flip-card-back-buttons {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.products_items:nth-child(3) .flip-card-back-buttons .material-icons {
+  color: #7B0323;
+  font-size: 40px !important;
+  margin: 0;
+}
+
+.products_items:nth-child(3) .flip-card-back-buttons .material-icons:hover{
+  color: #3C4C24;
+}
+
+.products_items:nth-child(3) .flip-card-back-name,
+.products_items:nth-child(3) .flip-card-back-item-price {
+  width: 100%;
+  text-align: left;
+  margin-left: 10px;
+}

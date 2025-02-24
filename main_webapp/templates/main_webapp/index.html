@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pura Charcuterie Board</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+    <header>
+      <div class="logo_company"></div>
+      <nav class="nav_class">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about_us_div">About Us</a></li>
+          <li><a href="#">Contacts</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+     <div class="main_picture"></div>
+      <div class = 'product_name'>Products</div>
+      <div class="products" id="products">
+        <div class="products_items">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+            </div>
+            <div class="flip-card-back">
+              <div class = 'flip-card-back-photo'></div>
+              <div class = 'flip-card-back-elements'>
+                <div class = 'flip-card-back-buttons'>
+                  <a href=""><i class="material-icons">info</i></a>
+                  <a href=""><i class="material-icons">shopping_basket</i></a>
+                </div> 
+                <div class = 'flip-card-back-name'>
+                  <h3>Summer Charcuterie Board</h3>
+                </div>
+                <div class = 'flip-card-back-item-price'>
+                  <p>Price: $60</p>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class="products_items">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+            </div>
+            <div class="flip-card-back">
+              <div class = 'flip-card-back-photo'></div>
+              <div class = 'flip-card-back-elements'>
+                <div class = 'flip-card-back-buttons'>
+                  <a href=""><i class="material-icons">info</i></a>
+                  <a href=""><i class="material-icons">shopping_basket</i></a>
+                </div> 
+                <div class = 'flip-card-back-name'>
+                  <h3>Spring Charcuterie Board</h3>
+                </div>
+                <div class = 'flip-card-back-item-price'>
+                  <p>Price: $90</p>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+        <div class="products_items">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+            </div>
+            <div class="flip-card-back">
+              <div class = 'flip-card-back-photo'></div>
+              <div class = 'flip-card-back-elements'>
+                <div class = 'flip-card-back-buttons'>
+                  <a href=""><i class="material-icons">info</i></a>
+                  <a href=""><i class="material-icons">shopping_basket</i></a>
+                </div> 
+                <div class = 'flip-card-back-name'>
+                  <h3>Winter Charcuterie Board</h3>
+                </div>
+                <div class = 'flip-card-back-item-price'>
+                  <p>Price: $120</p>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class = 'about_us_div' id= "about_us_div">
+        <div class = 'about_us_div_picture'></div>
+        <div class = 'about_us_div_description'></div>
+      </div>
+      <button class='btn-flotante material-icons'>shopping_cart</button>
+    </main>
+    <script src="{% static 'script/script_scroll.js' %}" defer></script>
+  </body>
+</html>
