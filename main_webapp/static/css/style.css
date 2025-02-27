@@ -131,28 +131,17 @@ header.scrolled .nav_class ul li a:hover{
 
 }
 
-.about_us_div {
-  box-sizing: border-box;
-  width: 100vw;
+#about_us_div {
+  padding: 20px;
+  background-color: #7B0323;
   height: 300px;
-  background-color: green;
-  margin: 0;
-  padding: 0;
 }
-.about_us_div * {
-  margin: 0;
-  padding: 0;
-}
+
 
 @media (max-width: 1024px) and (min-width: 768px) {
   .main_picture {
     height: 500px;
     background-size: cover;
-  }
-  .products {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 0 10px;
   }
 }
 
@@ -172,16 +161,6 @@ header.scrolled .nav_class ul li a:hover{
     display: none;
   }
 
-  .products {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 10px;
-  }
-  .products_items {
-    width: 100%;
-    min-height: 200px;
-    margin: 20px 0;
-  }
   .btn-flotante {
     display: block !important;
     position: fixed;
@@ -198,32 +177,49 @@ header.scrolled .nav_class ul li a:hover{
   }
 }
 
+@media (max-width: 768px) {
+  .products_items {
+    max-width: 90%;
+    margin: 20px auto; 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .products_items {
+    max-width: 90%; 
+    margin: 20px auto; 
+  }
+}
+
+
 .products_items {
   position: relative;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 4 / 5;
+  margin: 40px auto;
+  overflow: hidden;
 }
 
-.products_items:nth-child(1) {
-  perspective: 1000px;
-  width: 400px;
-  height: 500px;
-}
-
-.products_items:nth-child(1) .flip-card-inner {
-  position: relative;
+.products_items .flip-card-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   transition: transform 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
-.products_items:nth-child(1):hover .flip-card-inner {
+.products_items:hover .flip-card-inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
-.products_items:nth-child(1) .flip-card-front,
-.products_items:nth-child(1) .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -232,13 +228,14 @@ header.scrolled .nav_class ul li a:hover{
   overflow: hidden;
 }
 
-.products_items:nth-child(1) .flip-card-front {
+
+.summer .flip-card-front {
   background-image: url('../img/asd.jpeg');
   background-size: cover;
   background-position: center;
 }
 
-.products_items:nth-child(1) .flip-card-front::after {
+.summer .flip-card-front::after {
   content: "Summer";
   position: absolute;
   top: 0;
@@ -252,7 +249,7 @@ header.scrolled .nav_class ul li a:hover{
   justify-content: center;
 }
 
-.products_items:nth-child(1) .flip-card-back {
+.summer .flip-card-back {
   background: white;
   transform: rotateY(180deg);
   display: flex;
@@ -262,82 +259,21 @@ header.scrolled .nav_class ul li a:hover{
   padding: 20px;
 }
 
-.products_items:nth-child(1) .flip-card-back .flip-card-back-photo{
+.summer .flip-card-back .flip-card-back-photo {
   background-image: url('../img/asd.jpeg');
-  width: 100%;
-  height: 300px;
   background-size: cover;
   background-position: center;
-
-}
-
-.products_items:nth-child(1) .flip-card-back-elements{
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  height: 300px;
 }
 
-.products_items:nth-child(1) .flip-card-back-buttons {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
-
-.products_items:nth-child(1) .flip-card-back-buttons .material-icons {
-  color: #7B0323;
-  font-size: 40px !important;
-  margin-top: 10px;
-}
-
-.products_items:nth-child(1) .flip-card-back-buttons .material-icons:hover{
-  color: #3C4C24;
-}
-
-.products_items:nth-child(1) .flip-card-back-name,
-.flip-card-back-item-price {
-  width: 100%;
-  text-align: left;
-  margin-left: 10px;
-}
-
-.products_items:nth-child(2) {
-  perspective: 1000px;
-  width: 400px;
-  height: 500px;
-}
-
-.products_items:nth-child(2) .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.products_items:nth-child(2):hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.products_items:nth-child(2) .flip-card-front,
-.products_items:nth-child(2) .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 2%;
-  overflow: hidden;
-}
-
-.products_items:nth-child(2) .flip-card-front {
+.spring .flip-card-front {
   background-image: url('../img/asd3.jpeg');
   background-size: cover;
   background-position: center;
 }
 
-.products_items:nth-child(2) .flip-card-front::after {
+.spring .flip-card-front::after {
   content: "Spring";
   position: absolute;
   top: 0;
@@ -351,7 +287,7 @@ header.scrolled .nav_class ul li a:hover{
   justify-content: center;
 }
 
-.products_items:nth-child(2) .flip-card-back {
+.spring .flip-card-back {
   background: white;
   transform: rotateY(180deg);
   display: flex;
@@ -361,82 +297,22 @@ header.scrolled .nav_class ul li a:hover{
   padding: 20px;
 }
 
-.products_items:nth-child(2) .flip-card-back .flip-card-back-photo{
+.spring .flip-card-back .flip-card-back-photo {
   background-image: url('../img/asd3.jpeg');
-  width: 100%;
-  height: 300px;
   background-size: cover;
   background-position: center;
-
-}
-
-.products_items:nth-child(2) .flip-card-back-elements{
-  display: flex;
-  flex-direction: column;
   width: 100%;
+  height: 300px;
 }
 
-.products_items:nth-child(2) .flip-card-back-buttons {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-}
 
-.products_items:nth-child(2) .flip-card-back-buttons .material-icons {
-  color: #7B0323;
-  font-size: 40px !important;
-  margin-top: 10px;
-}
-
-.products_items:nth-child(2) .flip-card-back-buttons .material-icons:hover{
-  color: #3C4C24;
-}
-
-.products_items:nth-child(2) .flip-card-back-name,
-.flip-card-back-item-price {
-  width: 100%;
-  text-align: left;
-  margin-left: 10px;
-}
-
-.products_items:nth-child(3) {
-  perspective: 1000px;
-  width: 400px;
-  height: 500px;
-}
-
-.products_items:nth-child(3) .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-.products_items:nth-child(3):hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.products_items:nth-child(3) .flip-card-front,
-.products_items:nth-child(3) .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 2%;
-  overflow: hidden;
-}
-
-.products_items:nth-child(3) .flip-card-front {
+.winter .flip-card-front {
   background-image: url('../img/asd1.jpeg');
   background-size: cover;
   background-position: center;
 }
 
-.products_items:nth-child(3) .flip-card-front::after {
+.winter .flip-card-front::after {
   content: "Winter";
   position: absolute;
   top: 0;
@@ -450,7 +326,7 @@ header.scrolled .nav_class ul li a:hover{
   justify-content: center;
 }
 
-.products_items:nth-child(3) .flip-card-back {
+.winter .flip-card-back {
   background: white;
   transform: rotateY(180deg);
   display: flex;
@@ -460,22 +336,22 @@ header.scrolled .nav_class ul li a:hover{
   padding: 20px;
 }
 
-.products_items:nth-child(3) .flip-card-back .flip-card-back-photo{
+.winter .flip-card-back .flip-card-back-photo {
   background-image: url('../img/asd1.jpeg');
-  width: 100%;
-  height: 300px;
   background-size: cover;
   background-position: center;
-
+  width: 100%;
+  height: 300px;
 }
 
-.products_items:nth-child(3) .flip-card-back-elements{
+
+.flip-card-back .flip-card-back-elements {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.products_items:nth-child(3) .flip-card-back-buttons {
+.flip-card-back .flip-card-back-buttons {
   width: 100%;
   height: 60px;
   display: flex;
@@ -484,18 +360,18 @@ header.scrolled .nav_class ul li a:hover{
   gap: 40px;
 }
 
-.products_items:nth-child(3) .flip-card-back-buttons .material-icons {
+.flip-card-back .flip-card-back-buttons .material-icons {
   color: #7B0323;
   font-size: 40px !important;
-  margin: 0;
+  margin-top: 10px;
 }
 
-.products_items:nth-child(3) .flip-card-back-buttons .material-icons:hover{
+.flip-card-back .flip-card-back-buttons .material-icons:hover {
   color: #3C4C24;
 }
 
-.products_items:nth-child(3) .flip-card-back-name,
-.products_items:nth-child(3) .flip-card-back-item-price {
+.flip-card-back .flip-card-back-name,
+.flip-card-back .flip-card-back-item-price {
   width: 100%;
   text-align: left;
   margin-left: 10px;
