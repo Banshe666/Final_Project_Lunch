@@ -131,13 +131,6 @@ header.scrolled .nav_class ul li a:hover{
 
 }
 
-#about_us_div {
-  padding: 20px;
-  background-color: #7B0323;
-  height: 300px;
-}
-
-
 @media (max-width: 1024px) and (min-width: 768px) {
   .main_picture {
     height: 500px;
@@ -167,7 +160,7 @@ header.scrolled .nav_class ul li a:hover{
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-    background: #7B0323;
+    background: #3C4C24;
     color: white;
     padding: 15px 20px;
     border: none;
@@ -175,6 +168,7 @@ header.scrolled .nav_class ul li a:hover{
     cursor: pointer;
     font-size: 14px;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -375,4 +369,57 @@ header.scrolled .nav_class ul li a:hover{
   width: 100%;
   text-align: left;
   margin-left: 10px;
+}
+
+#about_us_div {
+  background-color: #7B0323;
+}
+
+.picture-col {
+  display: grid;
+  height: 300px;
+  align-items: center;
+}
+
+#about_us_div .about_us_div_picture {
+  background-image: url('../img/woman.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 100%;
+  width: 45%;
+  -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 10.5% 100%);
+  clip-path: polygon(0 0, 89.5% 0, 100% 100%, 10% 100%);
+  justify-self: end;
+  margin: 0;
+}
+
+.description-col {
+  display: grid;
+  height: 300px;
+  justify-items: start;
+}
+
+#about_us_div .about_us_div_description {
+  color: #fff;
+  font-family: 'Cascadia Code';
+  margin-top: 0;
+  margin-right: 40px;
+}
+
+@media (max-width: 767px){
+
+  #about_us_div .about_us_div_picture{
+    background-image: url('../img/woman.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100%;
+    width: 70%;
+    clip-path: none;
+    justify-self: center;
+    }
+  
 }
