@@ -160,7 +160,7 @@ header.scrolled .nav_class ul li a:hover{
     bottom: 20px;
     right: 20px;
     z-index: 9999;
-    background: #3C4C24;
+    background: #6B8E23;
     color: white;
     padding: 15px 20px;
     border: none;
@@ -364,7 +364,8 @@ header.scrolled .nav_class ul li a:hover{
 }
 
 .flip-card-back .flip-card-back-buttons .material-icons:hover {
-  color: #3C4C24;
+  color: #6B8E23;
+  transition: 0.2s ease-in-out;
 }
 
 .flip-card-back .flip-card-back-name,
@@ -458,7 +459,8 @@ header.scrolled .nav_class ul li a:hover{
 #FAQs_Questions {
   padding-left: 90px;
   padding-right: 15px;
-  margin-top: 20px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 
@@ -489,4 +491,72 @@ header.scrolled .nav_class ul li a:hover{
     padding-right: 15px;
     margin-top: 20px;
   }
+}
+
+#contact-us{
+  height: 500px;
+  background-color: #696969;
+  display: flex;
+}
+
+
+#contact-us .contact-container-second{
+  display: flex;
+  height: 500px;
+  background-color: rgba(123, 3, 35, 0.9) !important;
+  width: 400px;
+  flex-direction: column;
+  color: #fff;
+  align-items: center;
+  margin-left: 80px;
+}
+
+#contact-us .contact-container-second h3, p{
+  font-family: 'Cascadia Code';
+}
+
+#contact-us .contact-container-second h3{
+  margin-top: 10px;
+
+}
+
+#contact-us .contact-container-second p{
+  margin-left: 10px;
+  margin-bottom: 25px;
+}
+
+#contact-us .contact-container-second form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-us .contact-container-second form input{
+  margin-bottom: 15px;
+  height: 35px;
+  width: 300px;
+}
+
+#contact-us .contact-container-second form textarea{
+  height: 150px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+#contact-us .contact-container-second form input[type="submit"] {
+  display: block;  
+  margin: 0 auto;
+  background-color: #fff;
+  border: none;
+  font-family: 'Cascadia Code';
+  font-weight: bold;
+  font-style: normal;
+}
+
+#contact-us .contact-container-second form input[type="submit"]:hover{
+  background-color: #6B8E23;
+  color: #fff;
+  transition: 0.1s ease-in-out;
+
 }
