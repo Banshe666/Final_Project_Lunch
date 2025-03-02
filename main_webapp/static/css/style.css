@@ -241,6 +241,7 @@ header.scrolled .nav_class ul li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Cascadia Code';
 }
 
 .summer .flip-card-back {
@@ -279,6 +280,7 @@ header.scrolled .nav_class ul li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Cascadia Code';
 }
 
 .spring .flip-card-back {
@@ -318,6 +320,7 @@ header.scrolled .nav_class ul li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Cascadia Code';
 }
 
 .winter .flip-card-back {
@@ -408,9 +411,8 @@ header.scrolled .nav_class ul li a:hover{
   margin-right: 40px;
 }
 
-@media (max-width: 767px){
-
-  #about_us_div .about_us_div_picture{
+@media (max-width: 767px) {
+  #about_us_div .about_us_div_picture {
     background-image: url('../img/woman.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -420,6 +422,71 @@ header.scrolled .nav_class ul li a:hover{
     width: 70%;
     clip-path: none;
     justify-self: center;
-    }
-  
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateZ(0);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1224px) {
+  #about_us_div .about_us_div_picture {
+    background-image: url('../img/woman.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    clip-path: none;
+    justify-self: center;
+    padding: 0;
+    border: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateZ(0);
+  }
+
+  #about_us_div .about_us_div_description {
+    color: #fff;
+    font-family: 'Cascadia Code';
+    margin-top: 0;
+    margin-left: 40px;
+  }
+}
+
+#FAQs_Questions {
+  padding-left: 90px;
+  padding-right: 15px;
+  margin-top: 20px;
+}
+
+
+#FAQs_Questions details {
+  margin-top: 10px;
+}
+
+.details_class_master summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.details_class_master p {
+  margin: 0.5rem 0 0 1rem;
+}
+
+@media (max-width: 767px){
+  #FAQs_Questions {
+    padding-left: 10px !important;
+    padding-right: 15px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1240px){
+  #FAQs_Questions {
+    padding-left: 10px !important;
+    padding-right: 15px;
+    margin-top: 20px;
+  }
 }
