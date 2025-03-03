@@ -496,7 +496,6 @@ header.scrolled .nav_class ul li a:hover{
 #contact-us{
   height: 500px;
   background-color: #696969;
-  display: flex;
 }
 
 
@@ -559,4 +558,13 @@ header.scrolled .nav_class ul li a:hover{
   color: #fff;
   transition: 0.1s ease-in-out;
 
+}
+
+.logo-container-second{
+  width: 160px;
+  height: 160px;
+  background-image: url('../img/pura_logo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
