@@ -1,20 +1,19 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pura Charcuterie Board</title>
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
   <body>
     <header>
       <div class="logo_company"></div>
       <nav class="nav_class">
-        <ul> 
+        <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#about_us_div">About Us</a></li>
@@ -25,81 +24,92 @@
       </nav>
     </header>
     <main>
-     <div class="main_picture"></div>
-     <section class="container-fluid px-0 my-5">
-      <h2 class="product_name">Products</h2>
-      <div class="row" id="products">
-        <div class="col-md-4 col-sm-6">
-      <div class="products_items summer">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
+      <div class="main_picture"></div>
+      <section class="container-fluid px-0 my-5" id="products">
+        <h2 class="product_name text-center">Products</h2>
+        <div class="row g-0">
+          <div class="col-md-4 col-sm-6">
+            <div class="products_items summer">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                  <div class="flip-card-back-photo"></div>
+                  <div class="flip-card-back-elements">
+                    <div class="flip-card-back-buttons">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productInfoModal" data-product="Summer">
+                        <i class="material-icons">info</i>
+                      </a>
+                      <a href="#">
+                        <i class="material-icons">shopping_basket</i>
+                      </a>
+                    </div>
+                    <div class="flip-card-back-name">
+                      <h3>Summer Charcuterie Board</h3>
+                    </div>
+                    <div class="flip-card-back-item-price">
+                      <p>Price: $60</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flip-card-back">
-            <div class="flip-card-back-photo"></div>
-            <div class="flip-card-back-elements">
-              <div class="flip-card-back-buttons">
-                <a href=""><i class="material-icons">info</i></a>
-                <a href=""><i class="material-icons">shopping_basket</i></a>
-              </div> 
-              <div class="flip-card-back-name">
-                <h3>Summer Charcuterie Board</h3>
+          <div class="col-md-4 col-sm-6">
+            <div class="products_items spring">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                  <div class="flip-card-back-photo"></div>
+                  <div class="flip-card-back-elements">
+                    <div class="flip-card-back-buttons">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productInfoModal" data-product="Spring">
+                        <i class="material-icons">info</i>
+                      </a>
+                      <a href="#">
+                        <i class="material-icons">shopping_basket</i>
+                      </a>
+                    </div>
+                    <div class="flip-card-back-name">
+                      <h3>Spring Charcuterie Board</h3>
+                    </div>
+                    <div class="flip-card-back-item-price">
+                      <p>Price: $90</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="flip-card-back-item-price">
-                <p>Price: $60</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="products_items winter">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                </div>
+                <div class="flip-card-back">
+                  <div class="flip-card-back-photo"></div>
+                  <div class="flip-card-back-elements">
+                    <div class="flip-card-back-buttons">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#productInfoModal" data-product="Winter">
+                        <i class="material-icons">info</i>
+                      </a>
+                      <a href="#">
+                        <i class="material-icons">shopping_basket</i>
+                      </a>
+                    </div>
+                    <div class="flip-card-back-name">
+                      <h3>Winter Charcuterie Board</h3>
+                    </div>
+                    <div class="flip-card-back-item-price">
+                      <p>Price: $120</p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
-      </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-      <div class="products_items spring">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-          </div>
-          <div class="flip-card-back">
-            <div class="flip-card-back-photo"></div>
-            <div class="flip-card-back-elements">
-              <div class="flip-card-back-buttons">
-                <a href=""><i class="material-icons">info</i></a>
-                <a href=""><i class="material-icons">shopping_basket</i></a>
-              </div> 
-              <div class="flip-card-back-name">
-                <h3>Spring Charcuterie Board</h3>
-              </div>
-              <div class="flip-card-back-item-price">
-                <p>Price: $90</p>
-              </div>
-            </div> 
-          </div>
-        </div>
-      </div>
-        </div>
-        <div class="col-md-4 col-sm-6">
-      <div class="products_items winter">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <!-- Imagen de fondo para el producto 3 -->
-          </div>
-          <div class="flip-card-back">
-            <div class="flip-card-back-photo"></div>
-            <div class="flip-card-back-elements">
-              <div class="flip-card-back-buttons">
-                <a href=""><i class="material-icons">info</i></a>
-                <a href=""><i class="material-icons">shopping_basket</i></a>
-              </div> 
-              <div class="flip-card-back-name">
-                <h3>Winter Charcuterie Board</h3>
-              </div>
-              <div class="flip-card-back-item-price">
-                <p>Price: $120</p>
-              </div>
-            </div> 
-          </div>
-        </div>
-      </div>
-      </div>
-      </div>
       </section>
       <section id="about_us_div" class="container-fluid py-0">
         <div class="row align-items-center g-0">
@@ -107,75 +117,93 @@
             <div class="about_us_div_picture">
             </div>
           </div>
-          <div class="col-md-8 picture-col">
+          <div class="col-md-8 description-col">
             <div class="about_us_div_description">
-              <p>Hello, my name is Meilyn. I'm a law student with a passion for charcuterie. 
-                When I'm not immersed in my studies, I create exquisite charcuterie boards, 
-                combining flavors and artistic presentations that showcase my creativity and love for fine food.</p>
+              <p>Hello, my name is Meilyn. I'm a law student with a passion for charcuterie. When I'm not immersed in my studies, I create exquisite charcuterie boards, combining flavors and artistic presentations that showcase my creativity and love for fine food.</p>
             </div>
           </div>
         </div>
       </section>
-      <h2 class="product_name">FAQs</h2>
-      <section id = 'FAQs_Questions' class="container-fluid py-3">
+      <h2 class="product_name text-center">FAQs</h2>
+      <section id="FAQs_Questions" class="container-fluid py-3">
         <details class="details_class_master">
           <summary>What does each charcuterie board include?</summary>
           <p>Our charcuterie boards feature a carefully curated selection of cheeses, cured meats, fresh fruits, nuts, and jams, all artfully arranged on an artisanal board.</p>
         </details>
-      
-        <details class="details_class_master" >
+        <details class="details_class_master">
           <summary>Can I customize my board?</summary>
           <p>Yes, we offer customization options to suit your tastes and preferences. You can choose specific items or select from our suggested combinations via our customization form.</p>
         </details>
-      
         <details class="details_class_master">
           <summary>What is the delivery time?</summary>
           <p>We typically deliver within 3 to 5 business days within our service area.</p>
         </details>
-      
         <details class="details_class_master">
           <summary>Do you offer international or long-distance shipping?</summary>
           <p>No, our deliveries are strictly local and cover a radius of up to 25 miles from our location.</p>
         </details>
-      
         <details class="details_class_master">
           <summary>What is your return policy?</summary>
           <p>If your charcuterie board arrives in less than perfect condition, we offer returns or refunds within 15 days of purchase. Please refer to our returns policy for more details.</p>
         </details>
-      
       </section>
-      <section id = 'contact-us' class="container-fluid py-0">
-        <div class="row align-items-center g-0">
-          <div class="col-5 col-md-5 contact-container">
+      <section id="contact-us" class="container-fluid py-0">
+        <div class="row align-items-center g-0 justify-content-center px-0">
+          <div class="col-md-4 col-sm-12 contact-container mx-auto">
             <div class="contact-container-second">
               <h3>Contact Us</h3>
-              <p>Say something to us we will answer to you.</p>
+              <p>Say something to us, and we will answer you.</p>
               <form>
                 <input type="text" id="myFName" name="myFName" placeholder="Name" required> 
-              
                 <input type="tel" id="myPhone" name="myPhone" placeholder="Phone" required>
-              
                 <input type="email" id="myEmail" name="myEmail" placeholder="Email" required>
-              
                 <textarea id="myComments" name="myComments" rows="2" cols="20" placeholder="Message" required></textarea>
-              
                 <input type="submit" id="btn-submit" value="SEND">
               </form>
-              
             </div>
           </div>
-          <div class ="col-2 col-md-2 logo-container">
-            <div class ="logo-container-second">
+          <div class="col-md-4 d-md-block  info_contact_us_picture_container mx-auto">
+            <div class="info_contact_us_picture">
+              <div class = 'contact-us-imagen-work'></div>
+              <p>In Pura Charcuterie Board, our commitment is to provide you with authentic, 
+                memorable experiences. We carefully select every ingredient, 
+                blending tradition with modern innovation to create boards that delight your senses. 
+              </p>
             </div>
           </div>
-          <div class ="col-5 col-md-5 newsletter-container">
-            <div class = "newsletter-container-second">
+          <div class="col-md-4 col-sm-12 newsletter-container mx-auto">
+            <div class="newsletter-container-second">
+              <h3>NEWSLETTER</h3>
+              <p>Subscribe to get regular updates for new stuff and events.</p>
+              <form>
+                <input type="email" id="newsletter-email" name="n-email" placeholder="Enter Your Email" required>
+                <input type="submit" id="newsletter-btn-submit" value="SUBSCRIBE">
+              </form>
             </div>
           </div>
         </div>
       </section>
-      <button class='btn-flotante material-icons'>shopping_cart</button>
+      
+      <button class="btn-flotante material-icons">shopping_cart</button>
     </main>
-    <script src="{% static 'script/script_scroll.js' %}" defer></script>
+    <div class="modal fade" id="productInfoModal" tabindex="-1" aria-labelledby="productInfoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content custom-modal">
+        <div class="modal-header">
+        <h1 class="modal-title fs-5" id="productInfoModalLabel">Product Information</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Here you can see more details about the product.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+      </div>
+    </div>
+  </div>
+  <script src="{% static 'script/modal.js' %}"></script>
+  <script src="{% static 'script/script_scroll.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>  
   </body>
 </html>

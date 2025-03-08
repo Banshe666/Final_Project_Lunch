@@ -22,7 +22,7 @@ header {
   height: 120px;
   background: transparent;
   align-items: center;
-  font-family: Cascadia Code;
+  font-family: 'Roboto';
   backdrop-filter: blur(1px); 
   -webkit-backdrop-filter: blur(2px);
 }
@@ -72,7 +72,7 @@ header.scrolled .nav_class ul li a:hover{
   text-decoration: none;
   font-size: 18px;
   color: white;
-  font-family: 'Cascadia Code';
+  font-family: 'Roboto';
   transition: color 0.3s ease-in-out;
 }
 
@@ -127,7 +127,7 @@ header.scrolled .nav_class ul li a:hover{
   margin-top: 20px;
   font-size: 40px;
   font-weight: bold;
-  font-family: Cascadia Code;
+  font-family: 'Roboto';
 
 }
 
@@ -241,7 +241,7 @@ header.scrolled .nav_class ul li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Cascadia Code';
+  font-family: 'Roboto';
 }
 
 .summer .flip-card-back {
@@ -280,7 +280,7 @@ header.scrolled .nav_class ul li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Cascadia Code';
+  font-family: 'Roboto';
 }
 
 .spring .flip-card-back {
@@ -320,7 +320,7 @@ header.scrolled .nav_class ul li a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Cascadia Code';
+  font-family: 'Roboto';
 }
 
 .winter .flip-card-back {
@@ -407,8 +407,8 @@ header.scrolled .nav_class ul li a:hover{
 
 #about_us_div .about_us_div_description {
   color: #fff;
-  font-family: 'Cascadia Code';
-  margin-top: 0;
+  font-family: 'Roboto';
+  margin-top: 100px;
   margin-right: 40px;
 }
 
@@ -427,6 +427,12 @@ header.scrolled .nav_class ul li a:hover{
     margin-top: 0;
     margin-bottom: 0;
     transform: translateZ(0);
+  }
+
+  #about_us_div .about_us_div_description{
+    color: #fff;
+    font-family: 'Roboto';
+    margin-top: 10px !important;
   }
 }
 
@@ -450,8 +456,8 @@ header.scrolled .nav_class ul li a:hover{
 
   #about_us_div .about_us_div_description {
     color: #fff;
-    font-family: 'Cascadia Code';
-    margin-top: 0;
+    font-family: 'Roboto';
+    margin-top: 10px;
     margin-left: 40px;
   }
 }
@@ -507,11 +513,11 @@ header.scrolled .nav_class ul li a:hover{
   flex-direction: column;
   color: #fff;
   align-items: center;
-  margin-left: 80px;
+  margin: 0 auto;
 }
 
 #contact-us .contact-container-second h3, p{
-  font-family: 'Cascadia Code';
+  font-family: 'Roboto';
 }
 
 #contact-us .contact-container-second h3{
@@ -548,17 +554,95 @@ header.scrolled .nav_class ul li a:hover{
   margin: 0 auto;
   background-color: #fff;
   border: none;
-  font-family: 'Cascadia Code';
+  font-family: 'Roboto';
   font-weight: bold;
   font-style: normal;
 }
 
 #contact-us .contact-container-second form input[type="submit"]:hover{
-  background-color: #6B8E23;
+  background-color: #7B0323;;
   color: #fff;
+  border: 2px solid;
+  border-color: #fff;
   transition: 0.1s ease-in-out;
 
 }
+
+@media (max-width: 767px) {
+  
+  #contact-us{
+    background-color: #fff;
+  }
+  
+  #contact-us .contact-container-second {
+    width: 100% !important;
+    margin: 0 auto !important;
+
+  }
+}
+
+.info_contact_us_picture {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info_contact_us_picture .contact-us-imagen-work{
+  background-image: url('../img/pura_logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+}
+
+.info_contact_us_picture p{
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.newsletter-container-second{
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.newsletter-container-second h3{
+  color: #fff;
+}
+
+.newsletter-container-second p{
+  color: #fff;
+}
+
+.newsletter-container-second form  #newsletter-email{
+  height: 30px;
+  width: 250px;
+}
+
+.newsletter-container-second form input[type="submit"] { 
+  margin: 0 auto;
+  background-color: #fff;
+  border: none;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-size: normal;
+  height: 30px;
+  width: 110px;
+}
+
+
+.newsletter-container-second form input[type="submit"]:hover{
+  background-color: #7B0323;;
+  color: #fff;
+  border: 2px solid;
+  border-color: #fff;
+  transition: 0.1s ease-in-out;
+
+}
+
 
 .logo-container-second{
   width: 160px;
@@ -568,3 +652,70 @@ header.scrolled .nav_class ul li a:hover{
   background-position: center;
   background-size: cover;
 }
+
+@media (max-width: 767px){
+  .info_contact_us_picture_container{
+    display: none;
+  }
+
+  .newsletter-container-second{
+    padding-top: 30px;
+    
+  }
+
+  .newsletter-container-second form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    margin: 0 auto;
+  }
+  
+  .newsletter-container-second form input[type = 'submit']{
+    background-color: #7B0323;
+    margin-left: 5px;
+    color: #fff;
+  }
+
+  .newsletter-container-second h3{
+    color: #000;
+
+  }
+  .newsletter-container-second p{
+    color: #000;
+  }
+}
+
+
+.custom-modal .modal-content {
+  background-color: #f8f9fa;
+  border: 2px solid #7B0323;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.custom-modal .modal-header {
+  background-color: #7B0323;
+  color: #fff;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.custom-modal .modal-header .btn-close {
+  filter: invert(1);
+}
+
+.custom-modal .modal-body {
+  font-family: 'Roboto';
+  font-size: 1rem;
+}
+
+.custom-modal .modal-footer {
+  border-top: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
