@@ -1,12 +1,21 @@
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-
 }
 
 html{
   scroll-behavior: smooth;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main{
+  flex-grow: 1;
 }
 
 * {
@@ -116,9 +125,10 @@ header.scrolled .nav_class ul li a:hover{
 }
 
 .products_items {
-  width: 400px;
+  width: auto;
+  max-width: 400px;
   height: 500px;
-  margin: 40px auto;
+  margin: 20px auto;
 }
 
 
@@ -162,26 +172,33 @@ header.scrolled .nav_class ul li a:hover{
     z-index: 9999;
     background: #6B8E23;
     color: white;
-    padding: 15px 20px;
-    border: none;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ffffff !important;
     border-radius: 50%;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 14px;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 
 }
 
 @media (max-width: 768px) {
   .products_items {
-    max-width: 90%;
-    margin: 20px auto; 
+    max-width: 90% !important;
+    margin: 20px auto !important; 
+    padding: 10px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .products_items {
-    max-width: 90%; 
-    margin: 20px auto; 
+    max-width: 90% !important; 
+    margin: 20px auto !important; 
   }
 }
 
@@ -500,7 +517,7 @@ header.scrolled .nav_class ul li a:hover{
 }
 
 #contact-us{
-  height: 500px;
+  min-height: 500px;
   background-color: #696969;
 }
 
@@ -588,7 +605,7 @@ header.scrolled .nav_class ul li a:hover{
 }
 
 .info_contact_us_picture .contact-us-imagen-work{
-  background-image: url('../img/pura_logo.png');
+  background-image: url('../img/pura_logo_2.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -643,16 +660,6 @@ header.scrolled .nav_class ul li a:hover{
 
 }
 
-
-.logo-container-second{
-  width: 160px;
-  height: 160px;
-  background-image: url('../img/pura_logo.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
 @media (max-width: 767px){
   .info_contact_us_picture_container{
     display: none;
@@ -660,7 +667,14 @@ header.scrolled .nav_class ul li a:hover{
 
   .newsletter-container-second{
     padding-top: 30px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 30px;
     
+  }
+
+  .newsletter-container-second h3 {
+    text-align: center;
   }
 
   .newsletter-container-second form{
@@ -668,8 +682,6 @@ header.scrolled .nav_class ul li a:hover{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 0 !important;
-    margin: 0 auto;
   }
   
   .newsletter-container-second form input[type = 'submit']{
@@ -687,7 +699,19 @@ header.scrolled .nav_class ul li a:hover{
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .info_contact_us_picture_container {
+    display: none !important;
+  }
+}
 
+
+footer{
+    background-color: #1a1a1a;
+    text-align: center;
+    font-size: 12px;
+    color: #66686a;
+}
 .custom-modal .modal-content {
   background-color: #f8f9fa;
   border: 2px solid #7B0323;
@@ -718,4 +742,3 @@ header.scrolled .nav_class ul li a:hover{
   display: flex;
   justify-content: flex-end;
 }
-
