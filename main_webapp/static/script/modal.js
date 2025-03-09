@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var modalBody = productInfoModal.querySelector(".modal-body");
       if (product === "Summer") {
         modalTitle.textContent = "Summer Charcuterie Board";
-        modalBody.innerHTML =  `<h2>Product Detail</h2>
+        modalBody.innerHTML =  `<h2>Summer Delights</h2>
         <p>Here you can see more details about the product. This board is crafted with the finest ingredients and showcases a harmonious blend of flavors.</p>
         <ul>
           <li>3 Differents High-quality cheeses</li>
